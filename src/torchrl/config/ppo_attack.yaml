@@ -1,4 +1,4 @@
-device: "cuda"
+device: "cpu"
 
 logger:
   exp_name: ppo_attack
@@ -7,11 +7,11 @@ logger:
 
 collector:
   total_frames: 1_000_000
-  frames_per_batch: 8192
-  num_workers: 8
+  frames_per_batch: 4096
+  num_workers: 4
   envs_per_collector:
   preemptive_threshold: 1.0
-  device: "cuda"
+  device: "cpu"
 
 rb:
   prefetch:
